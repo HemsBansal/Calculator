@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculaor</title>
+</head>
+<style>
+    * {
+        font-family: calibri;
+        margin: 0;
+        padding: 0;
+    }
+    h1{
+        color: cyan;
+        text-align: center;
+        margin: 0;
+        margin-top: 10px;
+    }
+    body {
+        background-image: linear-gradient(45deg, gray, darkslategray);
+
+    }
+
+    form {
+        border: 1px solid white;
+        width: 375px;
+        height: 590px;
+        background-color: rgb(36, 36, 36);
+        margin: 30px auto;
+        box-shadow: 0px 0px 20px -2px black;
+        padding: 0px 15px;
+
+    }
+
+    .inp {
+        width: 100%;
+        height: 160px;
+        display: block;
+        margin: auto;
+        margin-top: 15px;
+        background-color: rgb(59, 59, 59);
+        border: none;
+        color: white;
+        font-size: 50px;
+        box-sizing: border-box;
+        padding:25px;
+        padding-bottom: 40px;
+        outline: none;
+        box-shadow: 0px 12px 0px rgb(59, 59, 59);
+    }
+
+    .slider {
+        width: 25px;
+        height: 4px;
+        background-color: white;
+        border-radius: 5px;
+        margin: auto;
+
+    }
+
+    .btn {
+        width:72px;
+        height: 72px;
+        border: none;
+        margin-bottom: 4px;
+        box-sizing: border-box;
+        background-color: rgba(0,0,0,0);
+        color: white;
+        font-size: 40px;
+        transition: 0.5s;
+        border-radius: 50%;
+        outline: none;
+    }
+
+    .btn:hover {
+        background-color: rgba(255,255,255,0.2);
+        box-shadow: 0px 0px 0px 6px  rgba(255,255,255,0.2);
+    }
+    .btn:active{
+        background-color:  rgba(255,255,255,0);
+        box-shadow: none;
+    }
+    .optr{
+        color: rgb(0, 225, 255);
+    }
+    footer {
+        text-align: center;
+        margin-top: 15px;
+        color: rgb(182, 182, 182);
+    }
+</style>
+
+<body>
+    <form name="form1" action="calc.html" method="POST">
+        <h1>Simple Calculator</h1>
+        <input type="text" name="answer" class="inp">
+        <div class="slider"></div>
+    <br>
+        <input type="button" value="7" class="btn" onclick="form1.answer.value+='7'">
+        <input type="button" value="8" class="btn" onclick="form1.answer.value+='8'">
+        <input type="button" value="9" class="btn" onclick="form1.answer.value+='9'">
+        <input type="button" value="÷" class="btn optr" onclick="form1.answer.value+='/'">
+        <input type="button" value="C" class="btn optr" onclick="form1.answer.value=''">
+    <br>
+        <input type="button" value="4" class="btn" onclick="form1.answer.value+='4'">
+        <input type="button" value="5" class="btn" onclick="form1.answer.value+='5'">
+        <input type="button" value="6" class="btn" onclick="form1.answer.value+='6'">
+        <input type="button" value="×" class="btn optr" onclick="form1.answer.value+='*'">
+        <input type="button" value="←" class="btn optr" onclick="form1.answer.value=form1.answer.value.substring(0,form1.answer.value.length-1)">
+
+    <br>
+        <input type="button" value="1" class="btn" onclick="form1.answer.value+='1'">
+        <input type="button" value="2" class="btn" onclick="form1.answer.value+='2'">
+        <input type="button" value="3" class="btn" onclick="form1.answer.value+='3'">
+        <input type="button" value="-" class="btn optr" onclick="form1.answer.value+='-'">
+
+    <br>
+        <input type="button" value="0" class="btn" onclick="form1.answer.value+='0'">
+        <input type="button" value="." class="btn" onclick="form1.answer.value+='.'">
+        <input type="button" value="=" class="btn optr" onclick="form1.answer.value=eval(form1.answer.value)" style="float: right;">
+        <input type="button" value="+" class="btn optr" onclick="form1.answer.value+='+'" style="float: right; margin-right: 4px;">
+
+
+
+        <footer onclick="alert('Created By Hemant Bansal')">
+            @hemsbansal
+        </footer>
+
+
+
+
+    </form>
+</body>
+
+</html>
